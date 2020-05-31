@@ -2,7 +2,7 @@ FROM bitnami/minideb:jessie
 
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
-ENV TIDB_VERSION
+ENV TIDB_VERSION=v4.0.0
 
 RUN  curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh | sh && ln -s /root/.tiup/bin/tiup /bin/tiup
 
